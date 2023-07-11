@@ -1,8 +1,8 @@
 Task 1.
 
-SELECT login, COUNT ("inDelivery") FROM "Orders" INNER JOIN "Couriers" on "Couriers".id = "Orders"."courierId" WHERE "inDelivery"='true' GROUP BY "Couriers".id, "Orders"."courierId";
+SELECT login, COUNT (track) FROM "Orders" INNER JOIN "Couriers" on "Couriers".id = "Orders"."courierId" WHERE "inDelivery"='true' GROUP BY login, track;
 
 Task 2.
 
-SELECT track, CASE WHEN finished = 'true' THEN '2' WHEN canñelled = 'true' THEN '-1' WHEN ÔinDeliveryÕ = 'true' THEN '1' ELSE '0' END AS status FROM "Orders";
+SELECT track, CASE WHEN finished = 'true' THEN '2' WHEN canсelled = 'true' THEN '-1' WHEN "inDelivery" = 'true' THEN '1' ELSE '0' END AS status FROM "Orders";
 
